@@ -24,17 +24,20 @@ class Objective0(injector: HasAndroidInjector) : Objective(injector, "config", R
     init {
         tasks.add(object : Task(this, R.string.objectives_bgavailableinns) {
             override fun isCompleted(): Boolean {
-                return sp.getBoolean(R.string.key_ObjectivesbgIsAvailableInNS, false)
+                return true
+                // return sp.getBoolean(R.string.key_ObjectivesbgIsAvailableInNS, false)
             }
         })
         tasks.add(object : Task(this, R.string.nsclienthaswritepermission) {
             override fun isCompleted(): Boolean {
-                return nsClientPlugin.hasWritePermission()
+                return true
+                // return nsClientPlugin.hasWritePermission()
             }
         })
         tasks.add(object : Task(this, R.string.virtualpump_uploadstatus_title) {
             override fun isCompleted(): Boolean {
-                return sp.getBoolean(R.string.key_virtualpump_uploadstatus, false)
+                return true
+                // return sp.getBoolean(R.string.key_virtualpump_uploadstatus, false)
             }
 
             override fun shouldBeIgnored(): Boolean {
@@ -43,17 +46,20 @@ class Objective0(injector: HasAndroidInjector) : Objective(injector, "config", R
         })
         tasks.add(object : Task(this, R.string.objectives_pumpstatusavailableinns) {
             override fun isCompleted(): Boolean {
-                return sp.getBoolean(R.string.key_ObjectivespumpStatusIsAvailableInNS, false)
+                return true
+                // return sp.getBoolean(R.string.key_ObjectivespumpStatusIsAvailableInNS, false)
             }
         })
         tasks.add(object : Task(this, R.string.hasbgdata) {
             override fun isCompleted(): Boolean {
-                return iobCobCalculator.ads.lastBg() != null
+                return true
+                // return iobCobCalculator.ads.lastBg() != null
             }
         })
         tasks.add(object : Task(this, R.string.loopenabled) {
             override fun isCompleted(): Boolean {
-                return (loop as PluginBase).isEnabled()
+                return true
+                // return (loop as PluginBase).isEnabled()
             }
         })
         tasks.add(object : Task(this, R.string.apsselected) {
